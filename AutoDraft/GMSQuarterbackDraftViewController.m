@@ -10,16 +10,28 @@
 
 @implementation GMSQuarterbackDraftViewController
 
-- (id) initWithCoder:(NSCoder *)aDecoder
+- (void) viewWillAppear:(BOOL)animated
 {
-    self = [super initWithCoder:aDecoder];
+    self.arrayToUse = [[GMSDraftManager sharedInstance] quarterBacks];
+    [self.tableView reloadData];
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    // Perform the real delete action here. Note: you may need to check editing style
+    //   if you do not perform delete only.
+    NSLog(@"Deleted row.");
     
-    if (self)
+    if (editingStyle == UITableViewCellEditingStyleDelete)
     {
+        GMSDraftObject *currentObject = (GMSDraftObject*)[self.arrayToUse objectAtIndex:indexPath.row];
+        [[GMSDraftManager sharedInstance] eraseFromAll:currentObject];
         self.arrayToUse = [[GMSDraftManager sharedInstance] quarterBacks];
+        
+        
+        // Delete the row from the data source
+        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
     }
-    
-    return self;
 }
 
 @end

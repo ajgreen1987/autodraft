@@ -10,6 +10,11 @@
 
 @implementation GMSBaseDraftViewController
 
+- (void) viewWillAppear:(BOOL)animated
+{
+    [self.tableView reloadData];
+}
+
 #pragma mark - Tableview Datasource
 - (NSInteger) numberOfSectionsInTableView:(UITableView *)tableView
 {
@@ -25,7 +30,7 @@
 {
     GMSDraftObject *currentObject = [self.arrayToUse objectAtIndex:indexPath.row];
     
-    NSString *simpleTableIdentifier = [NSString stringWithFormat:@"SimpleTableItem:%li%li", (long)indexPath.section, (long)indexPath.row];
+    NSString *simpleTableIdentifier = [NSString stringWithFormat:@"SimpleTableItem:%li",currentObject.playerId];
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
     
@@ -39,6 +44,10 @@
     return cell;
 }
 
-#pragma mark - Tableview Delegate
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    // Return YES - we will be able to delete all rows
+    return YES;
+}
 
 @end

@@ -1,23 +1,18 @@
 //
-//  FirstViewController.m
+//  GMSRunningbackDraftViewController.m
 //  AutoDraft
 //
 //  Created by Green, Andrew on 8/30/15.
 //  Copyright (c) 2015 Green, Andrew. All rights reserved.
 //
 
-#import "GMSAllDraftViewController.h"
+#import "GMSRunningbackDraftViewController.h"
 
-
-@interface GMSAllDraftViewController ()
-
-@end
-
-@implementation GMSAllDraftViewController
+@implementation GMSRunningbackDraftViewController
 
 - (void) viewWillAppear:(BOOL)animated
 {
-    self.arrayToUse = [[GMSDraftManager sharedInstance] allDraftObjects];
+    self.arrayToUse = [[GMSDraftManager sharedInstance] runningBacks];
     [self.tableView reloadData];
 }
 
@@ -31,7 +26,7 @@
     {
         GMSDraftObject *currentObject = (GMSDraftObject*)[self.arrayToUse objectAtIndex:indexPath.row];
         [[GMSDraftManager sharedInstance] eraseFromAll:currentObject];
-        self.arrayToUse = [[GMSDraftManager sharedInstance] allDraftObjects];
+        self.arrayToUse = [[GMSDraftManager sharedInstance] runningBacks];
         
         
         // Delete the row from the data source

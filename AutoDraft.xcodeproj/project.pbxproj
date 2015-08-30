@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		DA1C706D1B936F5D001315DE /* GMSBaseDraftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA1C706C1B936F5D001315DE /* GMSBaseDraftViewController.m */; };
+		DA2C3E3D1B937199000EC600 /* GMSRunningbackDraftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2C3E3C1B937199000EC600 /* GMSRunningbackDraftViewController.m */; };
+		DA2C3E401B9371B3000EC600 /* GMSTightEndDraftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2C3E3F1B9371B3000EC600 /* GMSTightEndDraftViewController.m */; };
+		DA2C3E431B9371D0000EC600 /* GMSKickerDraftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2C3E421B9371D0000EC600 /* GMSKickerDraftViewController.m */; };
+		DA2C3E461B9371EA000EC600 /* GMSDefenseDraftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2C3E451B9371EA000EC600 /* GMSDefenseDraftViewController.m */; };
+		DA2C3E491B93728D000EC600 /* GMSWideReceiverDraftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2C3E481B93728D000EC600 /* GMSWideReceiverDraftViewController.m */; };
 		DA61C0741B934F5700C73ED5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DA61C0731B934F5700C73ED5 /* main.m */; };
 		DA61C0771B934F5700C73ED5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DA61C0761B934F5700C73ED5 /* AppDelegate.m */; };
 		DA61C07A1B934F5700C73ED5 /* GMSAllDraftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA61C0791B934F5700C73ED5 /* GMSAllDraftViewController.m */; };
@@ -33,6 +38,16 @@
 /* Begin PBXFileReference section */
 		DA1C706B1B936F5D001315DE /* GMSBaseDraftViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMSBaseDraftViewController.h; sourceTree = "<group>"; };
 		DA1C706C1B936F5D001315DE /* GMSBaseDraftViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMSBaseDraftViewController.m; sourceTree = "<group>"; };
+		DA2C3E3B1B937199000EC600 /* GMSRunningbackDraftViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMSRunningbackDraftViewController.h; sourceTree = "<group>"; };
+		DA2C3E3C1B937199000EC600 /* GMSRunningbackDraftViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMSRunningbackDraftViewController.m; sourceTree = "<group>"; };
+		DA2C3E3E1B9371B3000EC600 /* GMSTightEndDraftViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMSTightEndDraftViewController.h; sourceTree = "<group>"; };
+		DA2C3E3F1B9371B3000EC600 /* GMSTightEndDraftViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMSTightEndDraftViewController.m; sourceTree = "<group>"; };
+		DA2C3E411B9371D0000EC600 /* GMSKickerDraftViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMSKickerDraftViewController.h; sourceTree = "<group>"; };
+		DA2C3E421B9371D0000EC600 /* GMSKickerDraftViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMSKickerDraftViewController.m; sourceTree = "<group>"; };
+		DA2C3E441B9371EA000EC600 /* GMSDefenseDraftViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMSDefenseDraftViewController.h; sourceTree = "<group>"; };
+		DA2C3E451B9371EA000EC600 /* GMSDefenseDraftViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMSDefenseDraftViewController.m; sourceTree = "<group>"; };
+		DA2C3E471B93728D000EC600 /* GMSWideReceiverDraftViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMSWideReceiverDraftViewController.h; sourceTree = "<group>"; };
+		DA2C3E481B93728D000EC600 /* GMSWideReceiverDraftViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMSWideReceiverDraftViewController.m; sourceTree = "<group>"; };
 		DA61C06E1B934F5700C73ED5 /* AutoDraft.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutoDraft.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA61C0721B934F5700C73ED5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA61C0731B934F5700C73ED5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -75,12 +90,22 @@
 		DA1C706A1B936F41001315DE /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				DA1C706B1B936F5D001315DE /* GMSBaseDraftViewController.h */,
+				DA1C706C1B936F5D001315DE /* GMSBaseDraftViewController.m */,
 				DA61C0781B934F5700C73ED5 /* GMSAllDraftViewController.h */,
 				DA61C0791B934F5700C73ED5 /* GMSAllDraftViewController.m */,
 				DA61C07B1B934F5700C73ED5 /* GMSQuarterbackDraftViewController.h */,
 				DA61C07C1B934F5700C73ED5 /* GMSQuarterbackDraftViewController.m */,
-				DA1C706B1B936F5D001315DE /* GMSBaseDraftViewController.h */,
-				DA1C706C1B936F5D001315DE /* GMSBaseDraftViewController.m */,
+				DA2C3E3B1B937199000EC600 /* GMSRunningbackDraftViewController.h */,
+				DA2C3E3C1B937199000EC600 /* GMSRunningbackDraftViewController.m */,
+				DA2C3E3E1B9371B3000EC600 /* GMSTightEndDraftViewController.h */,
+				DA2C3E3F1B9371B3000EC600 /* GMSTightEndDraftViewController.m */,
+				DA2C3E411B9371D0000EC600 /* GMSKickerDraftViewController.h */,
+				DA2C3E421B9371D0000EC600 /* GMSKickerDraftViewController.m */,
+				DA2C3E441B9371EA000EC600 /* GMSDefenseDraftViewController.h */,
+				DA2C3E451B9371EA000EC600 /* GMSDefenseDraftViewController.m */,
+				DA2C3E471B93728D000EC600 /* GMSWideReceiverDraftViewController.h */,
+				DA2C3E481B93728D000EC600 /* GMSWideReceiverDraftViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -266,10 +291,15 @@
 				DA61C07D1B934F5700C73ED5 /* GMSQuarterbackDraftViewController.m in Sources */,
 				DA61C09D1B934FBE00C73ED5 /* GMSDraftObject.m in Sources */,
 				DA61C0771B934F5700C73ED5 /* AppDelegate.m in Sources */,
+				DA2C3E431B9371D0000EC600 /* GMSKickerDraftViewController.m in Sources */,
+				DA2C3E491B93728D000EC600 /* GMSWideReceiverDraftViewController.m in Sources */,
 				DA61C0A11B9353D100C73ED5 /* GMSDraftManager.m in Sources */,
 				DA61C07A1B934F5700C73ED5 /* GMSAllDraftViewController.m in Sources */,
 				DA61C0741B934F5700C73ED5 /* main.m in Sources */,
+				DA2C3E461B9371EA000EC600 /* GMSDefenseDraftViewController.m in Sources */,
+				DA2C3E401B9371B3000EC600 /* GMSTightEndDraftViewController.m in Sources */,
 				DA1C706D1B936F5D001315DE /* GMSBaseDraftViewController.m in Sources */,
+				DA2C3E3D1B937199000EC600 /* GMSRunningbackDraftViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

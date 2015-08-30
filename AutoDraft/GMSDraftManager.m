@@ -84,6 +84,10 @@ static GMSDraftManager *sharedInstance;
     return [toReturn copy];
 }
 
+- (void) eraseFromAll:(GMSDraftObject*)draftObject 
+{
+    [self eraseObject:draftObject fromArray:_allDraftObjects];    
+}
 
 - (NSMutableArray*) allDraftObjects
 {
@@ -100,42 +104,48 @@ static GMSDraftManager *sharedInstance;
 
 - (NSMutableArray*) quarterBacks
 {
-    return [self setupSubArray:_quarterBacks
+    _quarterBacks = [self setupSubArray:_quarterBacks
                      fromArray:_allDraftObjects
            withPredicateString:[self predicateStringForKey:FFN_QUARTERBACK_KEY]];
+    
+    return _quarterBacks;
 }
 
 - (NSMutableArray*) wideReceivers
 {
-    return [self setupSubArray:_quarterBacks
+    _wideReceivers = [self setupSubArray:_wideReceivers
                      fromArray:_allDraftObjects
            withPredicateString:[self predicateStringForKey:FFN_WIDERECEIVER_KEY]];
+    
+    return _wideReceivers;
 }
 
 - (NSMutableArray*) tightEnds
 {
-    return [self setupSubArray:_quarterBacks
+    return [self setupSubArray:_tightEnds
                      fromArray:_allDraftObjects
            withPredicateString:[self predicateStringForKey:FFN_TIGHTEND_KEY]];
 }
 
 - (NSMutableArray*) runningBacks
 {
-    return [self setupSubArray:_quarterBacks
+    _runningBacks = [self setupSubArray:_runningBacks
                      fromArray:_allDraftObjects
            withPredicateString:[self predicateStringForKey:FFN_RUNNINGBACK_KEY]];
+    
+    return _runningBacks;
 }
 
 - (NSMutableArray*) kickers
 {
-    return [self setupSubArray:_quarterBacks
+    return [self setupSubArray:_kickers
                      fromArray:_allDraftObjects
            withPredicateString:[self predicateStringForKey:FFN_KICKER_KEY]];
 }
 
 - (NSMutableArray*) defenses
 {
-    return [self setupSubArray:_quarterBacks
+    return [self setupSubArray:_defenses
                      fromArray:_allDraftObjects
            withPredicateString:[self predicateStringForKey:FFN_DEFENSE_KEY]];
 }
@@ -147,11 +157,8 @@ static GMSDraftManager *sharedInstance;
 
 - (NSMutableArray*) setupSubArray:(NSMutableArray*)aMutableArray fromArray:(NSMutableArray*)aMasterArray withPredicateString:(NSString*)aPredicateString
 {
-    if ([aMutableArray count] < 1)
-    {
-       
-        aMutableArray = [[NSMutableArray alloc] initWithArray:[aMasterArray filteredArrayUsingPredicate:[self predicateFromString:aPredicateString]]];
-    }
+    aMutableArray = nil;
+    aMutableArray = [[NSMutableArray alloc] initWithArray:[aMasterArray filteredArrayUsingPredicate:[self predicateFromString:aPredicateString]]];
     
     return aMutableArray;
 }
@@ -159,6 +166,16 @@ static GMSDraftManager *sharedInstance;
 - (NSPredicate*) predicateFromString:(NSString*)aString
 {
     return [NSPredicate predicateWithFormat:aString];
+}
+
+- (void) eraseObject:(GMSDraftObject*)anObject fromArray:(NSMutableArray*)anArray
+{
+    [anArray enumerateObjectsWithOptions:NSEnumerationReverse usingBlock:^(GMSDraftObject *currentDraftObject, NSUInteger index, BOOL *stop) {
+        if (currentDraftObject.playerId == anObject.playerId)
+        {
+            [anArray removeObjectAtIndex:index];
+        }
+    }];
 }
 
 @end

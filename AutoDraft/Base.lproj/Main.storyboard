@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--All-->
@@ -42,13 +41,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="KQZ-1w-vlD" secondAttribute="centerX" id="6BV-lF-sBN"/>
-                            <constraint firstItem="kHA-Wr-z53" firstAttribute="top" secondItem="tsR-hK-woN" secondAttribute="topMargin" constant="20" id="7h9-TM-kZ4"/>
-                            <constraint firstItem="kHA-Wr-z53" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="8WT-Tc-M0n"/>
-                            <constraint firstAttribute="trailing" secondItem="kHA-Wr-z53" secondAttribute="trailing" id="I04-G2-5i4"/>
+                            <constraint firstItem="kHA-Wr-z53" firstAttribute="bottom" secondItem="4ug-Mw-9AY" secondAttribute="top" id="XNi-uk-hyl"/>
+                            <constraint firstItem="kHA-Wr-z53" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="Xcl-Lr-U9w"/>
                             <constraint firstItem="A5M-7J-77L" firstAttribute="top" secondItem="KQZ-1w-vlD" secondAttribute="bottom" constant="8" symbolic="YES" id="cfb-er-3JN"/>
                             <constraint firstItem="A5M-7J-77L" firstAttribute="centerX" secondItem="KQZ-1w-vlD" secondAttribute="centerX" id="e1l-AV-tCB"/>
+                            <constraint firstAttribute="trailing" secondItem="kHA-Wr-z53" secondAttribute="trailing" id="evE-lo-xZL"/>
                             <constraint firstAttribute="centerY" secondItem="KQZ-1w-vlD" secondAttribute="centerY" id="exm-UA-ej4"/>
-                            <constraint firstItem="kHA-Wr-z53" firstAttribute="bottom" secondItem="4ug-Mw-9AY" secondAttribute="top" id="ytb-3I-UIb"/>
+                            <constraint firstItem="kHA-Wr-z53" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" id="wUK-OT-qQO"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
@@ -57,7 +56,7 @@
                             </mask>
                         </variation>
                     </view>
-                    <tabBarItem key="tabBarItem" title="All" image="first" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="All" image="football" id="acW-dT-cKf"/>
                     <connections>
                         <outlet property="tableView" destination="kHA-Wr-z53" id="ZBK-AT-Uoo"/>
                     </connections>
@@ -106,14 +105,14 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="gu4-Qy-IDY" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leading" id="CE6-0m-p0H"/>
+                            <constraint firstItem="gu4-Qy-IDY" firstAttribute="bottom" secondItem="Djb-ko-YwX" secondAttribute="top" id="CZe-v9-1GL"/>
                             <constraint firstItem="NDk-cv-Gan" firstAttribute="top" secondItem="zEq-FU-wV5" secondAttribute="bottom" constant="8" symbolic="YES" id="Day-4N-Vmt"/>
-                            <constraint firstItem="gu4-Qy-IDY" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leading" id="HWQ-SQ-4Db"/>
                             <constraint firstItem="NDk-cv-Gan" firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" id="JgO-Fn-dHn"/>
-                            <constraint firstItem="gu4-Qy-IDY" firstAttribute="bottom" secondItem="Djb-ko-YwX" secondAttribute="top" id="U5n-jg-whm"/>
-                            <constraint firstItem="gu4-Qy-IDY" firstAttribute="top" secondItem="QS5-Rx-YEW" secondAttribute="top" constant="20" id="f8s-k2-cwQ"/>
+                            <constraint firstItem="gu4-Qy-IDY" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" id="at2-If-j6m"/>
                             <constraint firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" id="qqM-NS-xev"/>
                             <constraint firstAttribute="centerY" secondItem="zEq-FU-wV5" secondAttribute="centerY" id="qzY-Ky-pLD"/>
-                            <constraint firstAttribute="trailing" secondItem="gu4-Qy-IDY" secondAttribute="trailing" id="wCV-E9-Yd6"/>
+                            <constraint firstAttribute="trailing" secondItem="gu4-Qy-IDY" secondAttribute="trailing" id="yPI-yI-6h5"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
@@ -158,7 +157,7 @@
         <!--RB-->
         <scene sceneID="0eZ-pX-nfg">
             <objects>
-                <viewController id="O3u-mN-V9U" customClass="GMSQuarterbackDraftViewController" sceneMemberID="viewController">
+                <viewController id="O3u-mN-V9U" customClass="GMSRunningbackDraftViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="YaU-ZU-BeH"/>
                         <viewControllerLayoutGuide type="bottom" id="a9y-Pv-YwV"/>
@@ -180,16 +179,37 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="pmi-HW-Kqf">
+                                <rect key="frame" x="0.0" y="20" width="600" height="531"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="O3u-mN-V9U" id="aUR-kx-6YH"/>
+                                    <outlet property="delegate" destination="O3u-mN-V9U" id="JxC-ot-rPx"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="pmi-HW-Kqf" firstAttribute="bottom" secondItem="a9y-Pv-YwV" secondAttribute="top" id="3rP-fx-3Xj"/>
+                            <constraint firstItem="pmi-HW-Kqf" firstAttribute="top" secondItem="YaU-ZU-BeH" secondAttribute="bottom" id="BRH-22-5gX"/>
                             <constraint firstItem="hr0-oz-jsT" firstAttribute="centerX" secondItem="eHy-UU-PMN" secondAttribute="centerX" id="IN0-Br-aaG"/>
+                            <constraint firstItem="pmi-HW-Kqf" firstAttribute="leading" secondItem="RUb-4o-eFX" secondAttribute="leading" id="K0V-Va-6Rc"/>
                             <constraint firstItem="hr0-oz-jsT" firstAttribute="top" secondItem="eHy-UU-PMN" secondAttribute="bottom" constant="8" symbolic="YES" id="e8y-Rt-smZ"/>
+                            <constraint firstAttribute="trailing" secondItem="pmi-HW-Kqf" secondAttribute="trailing" id="qGC-vi-H9g"/>
                             <constraint firstAttribute="centerX" secondItem="eHy-UU-PMN" secondAttribute="centerX" id="rXn-Bl-OlQ"/>
                             <constraint firstAttribute="centerY" secondItem="eHy-UU-PMN" secondAttribute="centerY" id="zDe-Yo-6t6"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="eHy-UU-PMN"/>
+                                <exclude reference="hr0-oz-jsT"/>
+                            </mask>
+                        </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="RB" image="second" id="Ocq-Eg-r79"/>
+                    <connections>
+                        <outlet property="tableView" destination="pmi-HW-Kqf" id="6i3-Yv-h2b"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SfU-bq-ExE" sceneMemberID="firstResponder"/>
             </objects>
@@ -198,7 +218,7 @@
         <!--TE-->
         <scene sceneID="tMX-MM-a8K">
             <objects>
-                <viewController id="PLR-0g-d5G" customClass="GMSQuarterbackDraftViewController" sceneMemberID="viewController">
+                <viewController id="PLR-0g-d5G" customClass="GMSTightEndDraftViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="m2p-e2-KiO"/>
                         <viewControllerLayoutGuide type="bottom" id="Btq-Hi-q1X"/>
@@ -220,16 +240,37 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="J5e-oi-gH3">
+                                <rect key="frame" x="0.0" y="20" width="600" height="531"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="PLR-0g-d5G" id="9l4-yh-2Um"/>
+                                    <outlet property="delegate" destination="PLR-0g-d5G" id="K3L-dH-bUo"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerY" secondItem="cqI-3a-79D" secondAttribute="centerY" id="9Az-7s-7rx"/>
                             <constraint firstAttribute="centerX" secondItem="cqI-3a-79D" secondAttribute="centerX" id="I0U-gx-IId"/>
+                            <constraint firstAttribute="trailing" secondItem="J5e-oi-gH3" secondAttribute="trailing" id="PGe-8f-wm8"/>
+                            <constraint firstItem="J5e-oi-gH3" firstAttribute="bottom" secondItem="Btq-Hi-q1X" secondAttribute="top" id="Qwg-QL-TQS"/>
+                            <constraint firstItem="J5e-oi-gH3" firstAttribute="top" secondItem="m2p-e2-KiO" secondAttribute="bottom" id="hPO-7l-hDa"/>
+                            <constraint firstItem="J5e-oi-gH3" firstAttribute="leading" secondItem="rU0-ZD-spv" secondAttribute="leading" id="ptR-OX-fFc"/>
                             <constraint firstItem="NmO-Yu-0wK" firstAttribute="top" secondItem="cqI-3a-79D" secondAttribute="bottom" constant="8" symbolic="YES" id="wDi-BY-5U7"/>
                             <constraint firstItem="NmO-Yu-0wK" firstAttribute="centerX" secondItem="cqI-3a-79D" secondAttribute="centerX" id="wty-fR-qTg"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="cqI-3a-79D"/>
+                                <exclude reference="NmO-Yu-0wK"/>
+                            </mask>
+                        </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="TE" image="second" id="Vlc-lL-TDv"/>
+                    <connections>
+                        <outlet property="tableView" destination="J5e-oi-gH3" id="LBm-H8-cme"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pg7-nn-DdM" sceneMemberID="firstResponder"/>
             </objects>
@@ -238,7 +279,7 @@
         <!--WR-->
         <scene sceneID="Fjg-Lb-Eui">
             <objects>
-                <viewController id="LrJ-nP-4GG" customClass="GMSQuarterbackDraftViewController" sceneMemberID="viewController">
+                <viewController id="LrJ-nP-4GG" customClass="GMSWideReceiverDraftViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="cDd-Sy-n1A"/>
                         <viewControllerLayoutGuide type="bottom" id="ibu-Iu-Z8t"/>
@@ -260,16 +301,37 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="mwd-2j-Wce">
+                                <rect key="frame" x="0.0" y="20" width="600" height="531"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="LrJ-nP-4GG" id="hlA-h7-4vC"/>
+                                    <outlet property="delegate" destination="LrJ-nP-4GG" id="BCl-gE-FXD"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="mwd-2j-Wce" firstAttribute="leading" secondItem="fGM-UY-aSV" secondAttribute="leading" id="1QJ-MI-avD"/>
                             <constraint firstItem="4VS-Ce-JYn" firstAttribute="centerX" secondItem="gPI-NL-Ot4" secondAttribute="centerX" id="8oa-Ac-HMs"/>
+                            <constraint firstItem="mwd-2j-Wce" firstAttribute="top" secondItem="cDd-Sy-n1A" secondAttribute="bottom" id="C4j-7i-BTO"/>
+                            <constraint firstAttribute="trailing" secondItem="mwd-2j-Wce" secondAttribute="trailing" id="DrW-Hs-YE6"/>
                             <constraint firstItem="4VS-Ce-JYn" firstAttribute="top" secondItem="gPI-NL-Ot4" secondAttribute="bottom" constant="8" symbolic="YES" id="Gq8-FO-cgV"/>
                             <constraint firstAttribute="centerY" secondItem="gPI-NL-Ot4" secondAttribute="centerY" id="Wf3-CN-3sL"/>
                             <constraint firstAttribute="centerX" secondItem="gPI-NL-Ot4" secondAttribute="centerX" id="aXe-QM-zRw"/>
+                            <constraint firstItem="mwd-2j-Wce" firstAttribute="bottom" secondItem="ibu-Iu-Z8t" secondAttribute="top" id="vBU-1A-U4w"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="gPI-NL-Ot4"/>
+                                <exclude reference="4VS-Ce-JYn"/>
+                            </mask>
+                        </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="WR" image="second" id="rsH-VH-ZQ5"/>
+                    <connections>
+                        <outlet property="tableView" destination="mwd-2j-Wce" id="8vs-NG-LaK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ByY-lq-ry2" sceneMemberID="firstResponder"/>
             </objects>
@@ -278,7 +340,7 @@
         <!--DEF-->
         <scene sceneID="BOu-BS-7gp">
             <objects>
-                <viewController id="ePD-LE-Lto" customClass="GMSQuarterbackDraftViewController" sceneMemberID="viewController">
+                <viewController id="ePD-LE-Lto" customClass="GMSDefenseDraftViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="IQz-py-33P"/>
                         <viewControllerLayoutGuide type="bottom" id="1i0-Sb-89y"/>
@@ -300,16 +362,37 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="nZg-X9-UOz">
+                                <rect key="frame" x="0.0" y="20" width="600" height="531"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="ePD-LE-Lto" id="sUc-o9-ufH"/>
+                                    <outlet property="delegate" destination="ePD-LE-Lto" id="bWm-X5-sBv"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="H1p-FS-ADS" secondAttribute="centerX" id="7qh-OF-sGL"/>
                             <constraint firstAttribute="centerY" secondItem="H1p-FS-ADS" secondAttribute="centerY" id="8OQ-hO-sbK"/>
+                            <constraint firstItem="nZg-X9-UOz" firstAttribute="top" secondItem="IQz-py-33P" secondAttribute="bottom" id="XjC-8N-SqV"/>
                             <constraint firstItem="y0B-l9-trh" firstAttribute="centerX" secondItem="H1p-FS-ADS" secondAttribute="centerX" id="ZWS-FT-ZRE"/>
+                            <constraint firstItem="nZg-X9-UOz" firstAttribute="bottom" secondItem="1i0-Sb-89y" secondAttribute="top" id="bVk-8W-KrX"/>
                             <constraint firstItem="y0B-l9-trh" firstAttribute="top" secondItem="H1p-FS-ADS" secondAttribute="bottom" constant="8" symbolic="YES" id="egk-SH-4iN"/>
+                            <constraint firstAttribute="trailing" secondItem="nZg-X9-UOz" secondAttribute="trailing" id="iVb-MG-Wyg"/>
+                            <constraint firstItem="nZg-X9-UOz" firstAttribute="leading" secondItem="3yV-AI-mht" secondAttribute="leading" id="igB-v0-Kb3"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="H1p-FS-ADS"/>
+                                <exclude reference="y0B-l9-trh"/>
+                            </mask>
+                        </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="DEF" image="second" id="vwG-eM-xVO"/>
+                    <connections>
+                        <outlet property="tableView" destination="nZg-X9-UOz" id="Qyu-ZL-DeU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WS6-rp-pQS" sceneMemberID="firstResponder"/>
             </objects>
@@ -317,7 +400,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="first" width="30" height="30"/>
+        <image name="football" width="612" height="792"/>
         <image name="second" width="30" height="30"/>
     </resources>
 </document>

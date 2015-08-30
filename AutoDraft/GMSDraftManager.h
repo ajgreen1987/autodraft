@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+@class GMSDraftObject;
+
 @interface GMSDraftManager : NSObject
 
 @property (nonatomic, strong) NSMutableArray *allDraftObjects;
@@ -19,6 +21,8 @@
 @property (nonatomic, strong) NSMutableArray *defenses;
 
 + (instancetype) sharedInstance;
+
+- (void) eraseFromAll:(GMSDraftObject*)draftObject;
 
 
 @end
