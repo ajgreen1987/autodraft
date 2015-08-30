@@ -7,12 +7,8 @@
 //
 
 #import "GMSAllDraftViewController.h"
-#import "DGActivityIndicatorView.h"
-
 
 @interface GMSAllDraftViewController ()
-
-@property (nonatomic, strong) DGActivityIndicatorView *activityIndicatorView;
 
 @end
 
@@ -43,11 +39,6 @@
             
         });
     });
-    
-    
-
-    
-    [self stopAndRemoveActivityIndicator];
 }
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
@@ -66,20 +57,6 @@
         // Delete the row from the data source
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
     }
-}
-
-- (void) setupAndStartActivityIndicator
-{
-    self.activityIndicatorView= [[DGActivityIndicatorView alloc] initWithType:DGActivityIndicatorAnimationTypeDoubleBounce tintColor:[UIColor blackColor] size:20.0f];
-    self.activityIndicatorView.frame = CGRectMake(0.0f, 0.0f, 50.0f, 50.0f);
-    
-    [self.activityIndicatorView startAnimating];
-}
-
-- (void) stopAndRemoveActivityIndicator
-{
-    [self.activityIndicatorView stopAnimating];
-    [self.activityIndicatorView removeFromSuperview];
 }
 
 @end
