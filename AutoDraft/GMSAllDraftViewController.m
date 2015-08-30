@@ -6,15 +6,29 @@
 //  Copyright (c) 2015 Green, Andrew. All rights reserved.
 //
 
-#import "FirstViewController.h"
+#import "GMSAllDraftViewController.h"
 
-@interface FirstViewController ()
+
+@interface GMSAllDraftViewController ()
 
 @end
 
-@implementation FirstViewController
+@implementation GMSAllDraftViewController
 
-- (void)viewDidLoad {
+- (id) initWithCoder:(NSCoder *)aDecoder
+{
+    self = [super initWithCoder:aDecoder];
+    
+    if (self)
+    {
+        self.arrayToUse = [[GMSDraftManager sharedInstance] allDraftObjects];
+    }
+    
+    return self;
+}
+
+- (void)viewDidLoad
+{
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
 }

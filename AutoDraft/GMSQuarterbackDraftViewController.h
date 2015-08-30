@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GMSBaseDraftViewController.h"
 
-@interface SecondViewController : UIViewController
-
+@interface GMSQuarterbackDraftViewController : GMSBaseDraftViewController
 
 @end
 

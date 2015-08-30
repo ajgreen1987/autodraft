@@ -7,14 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA1C706D1B936F5D001315DE /* GMSBaseDraftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA1C706C1B936F5D001315DE /* GMSBaseDraftViewController.m */; };
 		DA61C0741B934F5700C73ED5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DA61C0731B934F5700C73ED5 /* main.m */; };
 		DA61C0771B934F5700C73ED5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DA61C0761B934F5700C73ED5 /* AppDelegate.m */; };
-		DA61C07A1B934F5700C73ED5 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA61C0791B934F5700C73ED5 /* FirstViewController.m */; };
-		DA61C07D1B934F5700C73ED5 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA61C07C1B934F5700C73ED5 /* SecondViewController.m */; };
+		DA61C07A1B934F5700C73ED5 /* GMSAllDraftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA61C0791B934F5700C73ED5 /* GMSAllDraftViewController.m */; };
+		DA61C07D1B934F5700C73ED5 /* GMSQuarterbackDraftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA61C07C1B934F5700C73ED5 /* GMSQuarterbackDraftViewController.m */; };
 		DA61C0801B934F5700C73ED5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA61C07E1B934F5700C73ED5 /* Main.storyboard */; };
 		DA61C0821B934F5700C73ED5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA61C0811B934F5700C73ED5 /* Images.xcassets */; };
 		DA61C0851B934F5700C73ED5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA61C0831B934F5700C73ED5 /* LaunchScreen.xib */; };
 		DA61C0911B934F5700C73ED5 /* AutoDraftTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DA61C0901B934F5700C73ED5 /* AutoDraftTests.m */; };
+		DA61C09D1B934FBE00C73ED5 /* GMSDraftObject.m in Sources */ = {isa = PBXBuildFile; fileRef = DA61C09C1B934FBE00C73ED5 /* GMSDraftObject.m */; };
+		DA61C0A11B9353D100C73ED5 /* GMSDraftManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DA61C0A01B9353D100C73ED5 /* GMSDraftManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,21 +31,27 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DA1C706B1B936F5D001315DE /* GMSBaseDraftViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMSBaseDraftViewController.h; sourceTree = "<group>"; };
+		DA1C706C1B936F5D001315DE /* GMSBaseDraftViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMSBaseDraftViewController.m; sourceTree = "<group>"; };
 		DA61C06E1B934F5700C73ED5 /* AutoDraft.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutoDraft.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA61C0721B934F5700C73ED5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA61C0731B934F5700C73ED5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DA61C0751B934F5700C73ED5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		DA61C0761B934F5700C73ED5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		DA61C0781B934F5700C73ED5 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		DA61C0791B934F5700C73ED5 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		DA61C07B1B934F5700C73ED5 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		DA61C07C1B934F5700C73ED5 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		DA61C0781B934F5700C73ED5 /* GMSAllDraftViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GMSAllDraftViewController.h; sourceTree = "<group>"; };
+		DA61C0791B934F5700C73ED5 /* GMSAllDraftViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GMSAllDraftViewController.m; sourceTree = "<group>"; };
+		DA61C07B1B934F5700C73ED5 /* GMSQuarterbackDraftViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GMSQuarterbackDraftViewController.h; sourceTree = "<group>"; };
+		DA61C07C1B934F5700C73ED5 /* GMSQuarterbackDraftViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GMSQuarterbackDraftViewController.m; sourceTree = "<group>"; };
 		DA61C07F1B934F5700C73ED5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DA61C0811B934F5700C73ED5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		DA61C0841B934F5700C73ED5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		DA61C08A1B934F5700C73ED5 /* AutoDraftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AutoDraftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA61C08F1B934F5700C73ED5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA61C0901B934F5700C73ED5 /* AutoDraftTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AutoDraftTests.m; sourceTree = "<group>"; };
+		DA61C09B1B934FBE00C73ED5 /* GMSDraftObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMSDraftObject.h; sourceTree = "<group>"; };
+		DA61C09C1B934FBE00C73ED5 /* GMSDraftObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMSDraftObject.m; sourceTree = "<group>"; };
+		DA61C09F1B9353D100C73ED5 /* GMSDraftManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMSDraftManager.h; sourceTree = "<group>"; };
+		DA61C0A01B9353D100C73ED5 /* GMSDraftManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMSDraftManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +72,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DA1C706A1B936F41001315DE /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				DA61C0781B934F5700C73ED5 /* GMSAllDraftViewController.h */,
+				DA61C0791B934F5700C73ED5 /* GMSAllDraftViewController.m */,
+				DA61C07B1B934F5700C73ED5 /* GMSQuarterbackDraftViewController.h */,
+				DA61C07C1B934F5700C73ED5 /* GMSQuarterbackDraftViewController.m */,
+				DA1C706B1B936F5D001315DE /* GMSBaseDraftViewController.h */,
+				DA1C706C1B936F5D001315DE /* GMSBaseDraftViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
 		DA61C0651B934F5700C73ED5 = {
 			isa = PBXGroup;
 			children = (
@@ -84,12 +106,11 @@
 		DA61C0701B934F5700C73ED5 /* AutoDraft */ = {
 			isa = PBXGroup;
 			children = (
+				DA1C706A1B936F41001315DE /* Controllers */,
+				DA61C09E1B9353C500C73ED5 /* Managers */,
+				DA61C09A1B934FAB00C73ED5 /* Objects */,
 				DA61C0751B934F5700C73ED5 /* AppDelegate.h */,
 				DA61C0761B934F5700C73ED5 /* AppDelegate.m */,
-				DA61C0781B934F5700C73ED5 /* FirstViewController.h */,
-				DA61C0791B934F5700C73ED5 /* FirstViewController.m */,
-				DA61C07B1B934F5700C73ED5 /* SecondViewController.h */,
-				DA61C07C1B934F5700C73ED5 /* SecondViewController.m */,
 				DA61C07E1B934F5700C73ED5 /* Main.storyboard */,
 				DA61C0811B934F5700C73ED5 /* Images.xcassets */,
 				DA61C0831B934F5700C73ED5 /* LaunchScreen.xib */,
@@ -122,6 +143,24 @@
 				DA61C08F1B934F5700C73ED5 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DA61C09A1B934FAB00C73ED5 /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				DA61C09B1B934FBE00C73ED5 /* GMSDraftObject.h */,
+				DA61C09C1B934FBE00C73ED5 /* GMSDraftObject.m */,
+			);
+			name = Objects;
+			sourceTree = "<group>";
+		};
+		DA61C09E1B9353C500C73ED5 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				DA61C09F1B9353D100C73ED5 /* GMSDraftManager.h */,
+				DA61C0A01B9353D100C73ED5 /* GMSDraftManager.m */,
+			);
+			name = Managers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -224,10 +263,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DA61C07D1B934F5700C73ED5 /* SecondViewController.m in Sources */,
+				DA61C07D1B934F5700C73ED5 /* GMSQuarterbackDraftViewController.m in Sources */,
+				DA61C09D1B934FBE00C73ED5 /* GMSDraftObject.m in Sources */,
 				DA61C0771B934F5700C73ED5 /* AppDelegate.m in Sources */,
-				DA61C07A1B934F5700C73ED5 /* FirstViewController.m in Sources */,
+				DA61C0A11B9353D100C73ED5 /* GMSDraftManager.m in Sources */,
+				DA61C07A1B934F5700C73ED5 /* GMSAllDraftViewController.m in Sources */,
 				DA61C0741B934F5700C73ED5 /* main.m in Sources */,
+				DA1C706D1B936F5D001315DE /* GMSBaseDraftViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,6 +466,7 @@
 				DA61C0961B934F5700C73ED5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DA61C0971B934F5700C73ED5 /* Build configuration list for PBXNativeTarget "AutoDraftTests" */ = {
 			isa = XCConfigurationList;
@@ -432,6 +475,7 @@
 				DA61C0991B934F5700C73ED5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "GMSDraftManager.h"
 
 @interface AppDelegate ()
 
@@ -15,7 +16,10 @@
 @implementation AppDelegate
 
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
+    NSMutableArray *draftObjects = [[GMSDraftManager sharedInstance] allDraftObjects];
+    
     // Override point for customization after application launch.
     return YES;
 }
