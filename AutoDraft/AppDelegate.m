@@ -17,9 +17,7 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
-{
-    NSMutableArray *draftObjects = [[GMSDraftManager sharedInstance] allDraftObjects];
-    
+{    
     // Override point for customization after application launch.
     return YES;
 }

@@ -15,9 +15,14 @@
 
 @implementation GMSAllDraftViewController
 
-- (void) viewWillAppear:(BOOL)animated
+- (void) viewDidAppear:(BOOL)animated
 {
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
+    
     self.arrayToUse = [[GMSDraftManager sharedInstance] allDraftObjects];
+    
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+    
     [self.tableView reloadData];
 }
 
